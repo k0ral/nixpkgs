@@ -60,6 +60,9 @@ in
   };
 
   config = mkIf cfg.enable {
+    services.fcgiwrap.enable = true;
+    services.nginx.enable = true;
+
     services.nginx.httpConfig = ''
       server {
         server_name ${cfg.serverName};
