@@ -36,7 +36,7 @@ in
 
     serverName = mkOption {
       type = types.str;
-      default = "gitweb.${config.networking.domain}";
+      default = ''gitweb${if config.networking.domain == null then "" else ".${config.networking.domain}"}'';
       description = "Domain name associated to gitweb.";
     };
 
