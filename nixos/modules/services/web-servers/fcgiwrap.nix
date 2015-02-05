@@ -35,11 +35,13 @@ in {
       user = mkOption {
         type = types.nullOr types.str;
         default = null;
+        description = "User permissions for the socket.";
       };
 
       group = mkOption {
         type = types.nullOr types.str;
         default = null;
+        description = "Group permissions for the socket.";
       };
     };
   };
