@@ -25,7 +25,7 @@ in
     extraConfig = mkOption {
       default = "";
       type = types.lines;
-      description = "Verbatim configuration text appended to the generated gitweb.conf file."
+      description = "Verbatim configuration text appended to the generated gitweb.conf file.";
     };
 
     extraNginxConfig = mkOption {
